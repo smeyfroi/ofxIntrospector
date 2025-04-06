@@ -40,6 +40,7 @@ class Introspector {
 public:
   void update();
   void draw();
+  void draw(int scale);
   bool keyPressed(int key); // return true if key press handled
 
   void addCircle(float x, float y, float r, ofColor color, bool filled, uint64_t lifetimeFrames=40);

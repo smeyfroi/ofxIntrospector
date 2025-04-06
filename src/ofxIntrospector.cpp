@@ -75,6 +75,17 @@ void Introspector::draw() {
                 [](auto& s) { s->draw(); });
 }
 
+// drawing on Introspection is normalised so scale up
+void Introspector::draw(int scale) {
+  ofPushStyle();
+  ofPushView();
+  ofEnableBlendMode(OF_BLENDMODE_ALPHA);
+  ofScale(scale);
+  draw();
+  ofPopView();
+  ofPopStyle();
+}
+
 bool Introspector::keyPressed(int key) {
   if (key == 'i') {
     visible = !visible;
