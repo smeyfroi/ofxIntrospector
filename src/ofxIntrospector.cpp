@@ -4,7 +4,7 @@
 #include "ofUtils.h"
 
 constexpr float FADE_FACTOR = 0.95;
-constexpr float LINE_WIDTH = 4.0;
+constexpr float LINE_WIDTH = 1.0;
 
 Introspector::Shape::Shape(float x_, float y_, ofColor color_, uint64_t lifetimeFrames_) :
 x(x_), y(y_), color(color_), lifetimeFrames(lifetimeFrames_)
@@ -75,7 +75,7 @@ void Introspector::draw() {
                 [](auto& s) { s->draw(); });
 }
 
-// drawing on Introspection is normalised so scale up
+// drawing on Introspection is usually normalised so scale up
 void Introspector::draw(int scale) {
   ofPushStyle();
   ofPushView();

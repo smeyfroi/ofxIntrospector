@@ -45,8 +45,9 @@ public:
 
   void addCircle(float x, float y, float r, ofColor color, bool filled, uint64_t lifetimeFrames=40);
   void addLine(float x, float y, float x2, float y2, ofColor color, uint64_t lifetimeFrames=40);
-  
+
+  bool visible = false;
+
 private:
   std::vector<std::unique_ptr<Introspector::Shape>> shapes;
-  bool visible;
 };
