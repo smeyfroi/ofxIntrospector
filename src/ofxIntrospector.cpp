@@ -79,7 +79,6 @@ void Introspector::draw() {
 void Introspector::draw(int scale) {
   ofPushStyle();
   ofPushView();
-  ofEnableBlendMode(OF_BLENDMODE_ALPHA);
   ofScale(scale);
   draw();
   ofPopView();
